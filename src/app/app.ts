@@ -32,20 +32,15 @@ export class App implements OnInit {
       this.firstCard = card;
       return;
     }
-
-    // Second click
+    
     this.lock = true;
 
     if (this.firstCard.pairId === card.pairId) {
-      // ✅ Match → keep both flipped
       this.matchedCards.update((m) => new Set([...m, this.firstCard!.key, card.key]));
       this.resetTurn();
     } else {
-      // ❌ No match → flip both back
       this.flippedCards.set(new Set());
       this.resetTurn();
-      // setTimeout(() => {
-      // }, 500);
     }
   }
 
