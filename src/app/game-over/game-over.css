@@ -1,0 +1,119 @@
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(20, 20, 20, 0.85),
+    rgba(5, 5, 5, 0.95)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+}
+
+/* Card */
+.game-over-card {
+  background: linear-gradient(
+    145deg,
+    #1a1a1a,
+    #0e0e0e
+  );
+  border-radius: 20px;
+  padding: 32px 36px;
+  width: 320px;
+  text-align: center;
+  color: #f5f5f5;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  animation: popIn 0.5s ease-out;
+}
+
+/* Title */
+.game-over-card h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle */
+.game-over-card p {
+  opacity: 0.75;
+  margin-bottom: 24px;
+}
+
+/* Score */
+.score {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 24px;
+}
+
+.score span {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  display: block;
+}
+
+.score strong {
+  font-size: 1.6rem;
+}
+
+/* Buttons */
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 0;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Primary Button */
+.btn.primary {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.35);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 65, 108, 0.45);
+}
+
+/* Secondary Button */
+.btn.secondary {
+  background: #222;
+  color: #bbb;
+}
+
+.btn.secondary:hover {
+  background: #2a2a2a;
+  color: white;
+}
+
+/* Animation */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
