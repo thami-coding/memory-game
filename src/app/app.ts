@@ -24,15 +24,15 @@ export class App implements OnInit {
       return;
     }
 
-    // ✅ Flip ONLY the clicked card
+
     this.flippedCards.update((set) => new Set([...set, card.key]));
 
-    // First click
+  
     if (!this.firstCard) {
       this.firstCard = card;
       return;
     }
-    
+
     this.lock = true;
 
     if (this.firstCard.pairId === card.pairId) {
