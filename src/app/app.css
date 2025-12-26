@@ -1,0 +1,11 @@
+.main {
+  margin: 0.5rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px solid red;
+  gap: 30px;
+  justify-content: center;
+  /* align-items: center; */
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
